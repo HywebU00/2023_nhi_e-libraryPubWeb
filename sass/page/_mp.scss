@@ -1,0 +1,391 @@
+.more {
+  --color: #fff;
+  --bgColor: #{$colorPrimary};
+  a {
+    color: var(--color);
+    background-color: var(--bgColor);
+    display: inline-block;
+    padding: 0.35em 1.5em;
+    border-radius: 65px;
+    font-size: 1rem;
+  }
+}
+
+h2 {
+  padding: 0 45px;
+  @include screen('tablet') {
+    padding: 0;
+  }
+  &.mainTitle {
+    font-size: rem(40);
+    color: $colorPrimary;
+    letter-spacing: 2px;
+    margin: 0 0 1em 0;
+    @include screen('mobile') {
+      font-size: rem(30);
+      text-align: center;
+    }
+    .en {
+      font-size: 2em;
+      color: $colorImportant;
+      font-weight: 200;
+      text-transform: capitalize;
+      margin-right: 10px;
+      line-height: 1.5;
+      @include screen('mobile') {
+        display: block;
+      }
+    }
+  }
+}
+
+// 首頁區塊設定
+.mp {
+  > section {
+    padding: 3em 0 5em 0;
+    @include screen('mobile') {
+      padding: 1em 0 2em 0;
+    }
+  }
+
+  .news {
+    background: #f7fbfc url(../images/news_bg.jpg) no-repeat top right;
+    .newsList {
+      @include liReset;
+      padding: 0 80px;
+      @include screen('mobile') {
+        padding: 0;
+      }
+      li {
+        margin-bottom: 1em;
+        @include screen('mobile') {
+          margin-bottom: 0.5em;
+        }
+        a {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 1em 1.5em;
+          border-radius: 60px;
+          background: rgba(233, 241, 243, 0.6);
+          box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.07);
+          backdrop-filter: blur(5px);
+          transition: 0.3s;
+          @include screen('mobile') {
+            padding: 1em;
+          }
+          &:hover {
+            box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.15);
+            background-color: #fff;
+            color: $aHover;
+            transform: translateX(-5px);
+          }
+          time {
+            display: inline-block;
+            margin-right: 1.5em;
+            @include screen('mobile') {
+              margin-right: 0.5em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //最新影片
+  .video {
+    background: $colorPrimary url(../images/video_bg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    .container {
+      @include screen('mobile') {
+        padding-bottom: 5em;
+      }
+    }
+    .more {
+      position: absolute;
+      top: 70px;
+      right: 90px;
+      --color: #{$colorPrimary};
+      --bgColor: #fff;
+      @include screen('mobile') {
+        top: auto;
+        bottom: 1em;
+        right: auto;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .mainTitle {
+      color: #fff;
+      .en {
+        color: #fff;
+      }
+    }
+    .videoSlider {
+      .swiper {
+        margin-left: 120px;
+        overflow: visible;
+        @include screen('mobile') {
+          margin-left: 0;
+          overflow: hidden;
+          .swiper-slide {
+            padding: 5px;
+          }
+        }
+      }
+      .swiperArrow {
+        background: #fff;
+        &::before,
+        &::after {
+          background-color: $colorPrimary;
+        }
+      }
+      a {
+        display: block;
+        position: relative;
+        aspect-ratio: 16/9;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: rgba($colorLight, 0.75) 0 0 0 1px;
+        transform: scale(0.75);
+        transition: 0.3s;
+        @include screen('mobile') {
+          aspect-ratio: 4/3;
+        }
+        &:hover {
+          box-shadow: $colorPrimary 0 0 0 1px, $colorLight 0 0 0 5px;
+        }
+        &::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0) 31%, rgba(0, 0, 0, 0.3) 64%, rgba(0, 0, 0, 0.98) 96%);
+        }
+        &::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          background: url(../images/basic/icon_play_active.svg) center no-repeat;
+          background-size: 18%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .textBlock {
+        align-content: flex-end;
+        bottom: 0;
+        left: 0;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(270deg, rgba(15, 36, 45, 0.73) 25%, rgba(26, 78, 95, 0.33) 60%);
+          z-index: 2;
+          transition: 0.2s;
+        }
+      }
+      .swiper-slide-prev {
+        a {
+          opacity: 0;
+        }
+      }
+      .swiper-slide-active {
+        a {
+          transform: scale(1);
+          .textBlock {
+            &::before {
+              opacity: 0;
+            }
+          }
+        }
+      }
+      .swiper-slide-next {
+        a {
+          &:after {
+            content: '';
+            background: url(../images/basic/icon_play.svg) center no-repeat;
+            background-size: 120px;
+          }
+          &:hover {
+            .textBlock {
+              &::before {
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //最新單張
+  .post {
+    background: #f8fcfd url(../images/post_bg.svg) top left no-repeat;
+    background-size: 1920px;
+    .mainTitle {
+      text-align: center;
+      .en {
+        display: block;
+      }
+    }
+    .postSlider {
+      padding: 0 120px;
+      @include screen('mobile') {
+        padding: 0;
+      }
+      .swiper {
+        padding: 10px;
+      }
+      a {
+        display: block;
+        aspect-ratio: 1/1;
+        position: relative;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: rgba($colorLight, 0.75) 0 0 0 1px, 0px 4px 4px 0px rgba(12, 76, 103, 0.25);
+        &:hover {
+          .textBlock {
+            top: 0;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .textBlock {
+          background: rgba(1, 46, 65, 0.75);
+          backdrop-filter: blur(2px);
+          justify-content: center;
+          align-content: center;
+          text-align: center;
+          top: 100%;
+          transition: 0.3s ease-in;
+          time {
+            padding-bottom: 0.65em;
+            margin-bottom: 0.8em;
+            border-bottom: 2px solid #fff;
+          }
+        }
+      }
+    }
+    .more {
+      margin-top: 2em;
+      text-align: center;
+    }
+  }
+}
+
+.popular {
+  display: flex;
+  align-items: center;
+  padding: 3em 0;
+  @media screen and (min-width: 1440px) {
+    margin-left: calc((100% - 1440px) / 2);
+  }
+  @include screen('tablet') {
+    flex-wrap: wrap;
+    padding: 0 0 2em 0;
+  }
+
+  h2 {
+    position: relative;
+    z-index: 2;
+    &.mainTitle {
+      color: #fff;
+      padding-left: 90px;
+      @include screen('tablet') {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .en {
+      color: #fff;
+      display: block;
+      line-height: 1.8;
+    }
+  }
+  .popularList {
+    @include liReset;
+    flex: 1 1 auto;
+    max-width: calc(100% - 440px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: hidden;
+    @include screen('tablet') {
+      max-width: 100%;
+      padding-left: 15px;
+    }
+    li {
+      margin: 0 -5px 1em 0;
+      @include screen('mobile') {
+        margin-bottom: 0.5em;
+      }
+
+      &:first-of-type {
+        width: calc(100% - 100px);
+        @include screen('mobile') {
+          width: calc(100% - 30px);
+        }
+      }
+      &:nth-of-type(2) {
+        width: calc(100% - 50px);
+        @include screen('mobile') {
+          width: calc(100% - 15px);
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+        width: 100%;
+      }
+      a {
+        color: #fff;
+        display: block;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 1em 3em 1em 1.5em;
+        border-radius: 60px 0 0 60px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 77%, rgba(255, 255, 255, 0.04) 110%);
+        box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.15);
+        backdrop-filter: blur(5px);
+        transition: 0.3s;
+        @include screen('mobile') {
+          padding: 1em;
+        }
+        &:hover {
+          background: linear-gradient(90deg, #fff 60%, rgba(255, 255, 255, 0.3) 110%);
+          color: $aHover;
+          transform: translateX(-5px);
+        }
+        time {
+          display: inline-block;
+          margin-right: 1.5em;
+        }
+      }
+    }
+  }
+}
