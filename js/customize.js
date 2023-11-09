@@ -87,12 +87,12 @@ window.addEventListener('load', () => {
     },
   });
 
-  //首頁video輪播
+  //首頁post輪播
   const postSwiper = new Swiper('.postSlider .swiper', {
     slidesPerView: 2,
     //centeredSlides: true,
     spaceBetween: 22,
-    loop: true,
+    loop: false,
     // 切換點
     pagination: {
       el: '.postSlider .swiperDots',
