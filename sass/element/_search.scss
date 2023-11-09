@@ -86,9 +86,15 @@
     }
     .topic {
       flex-basis: 60%;
+      @include screen('mobile') {
+        flex-basis: 100%;
+      }
     }
     .type {
       flex-basis: 40%;
+      @include screen('mobile') {
+        flex-basis: 100%;
+      }
     }
     .keyword {
       flex-basis: 100%;
@@ -107,7 +113,7 @@
     top: 60px;
     left: 0;
     padding: 10px;
-    background: #444;
+    background: linear-gradient(180deg, #e9f1f3 15.1%, #e9f1f3 23.38%, rgba(189, 223, 227) 100%);
     label {
       display: none;
     }
@@ -128,12 +134,12 @@
     left: 0;
     right: 0;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0.5em 0;
+    background: linear-gradient(180deg, #e9f1f3 15%, #e9f1f3 23%, rgba(189, 223, 227, 1) 100%);
     .content {
       padding: 10px;
       display: flex;
       flex-wrap: wrap;
-      background: #444;
     }
     .formGrp {
       display: flex;
@@ -142,13 +148,6 @@
         flex-grow: 1;
         margin: 0;
         margin-right: 8px;
-      }
-    }
-    .keywordHot {
-      ul {
-        a {
-          color: #fff;
-        }
       }
     }
   }
@@ -202,14 +201,16 @@
     padding: 0.3em 0 0 0.3em;
     .label {
       color: $colorPrimary;
+      word-break: break-word;
+      flex: 1 0 auto;
     }
     ul {
       line-height: 1.65em;
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: flex-end;
       list-style-type: none;
+      flex-wrap: wrap;
       li {
         margin: 0;
         padding: 0 0.5em 0 0;

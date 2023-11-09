@@ -2550,8 +2550,18 @@ kbd kbd {
 .webSearch .content .topic {
   flex-basis: 60%;
 }
+@media screen and (max-width: 767px) {
+  .webSearch .content .topic {
+    flex-basis: 100%;
+  }
+}
 .webSearch .content .type {
   flex-basis: 40%;
+}
+@media screen and (max-width: 767px) {
+  .webSearch .content .type {
+    flex-basis: 100%;
+  }
 }
 .webSearch .content .keyword {
   flex-basis: 100%;
@@ -2568,7 +2578,7 @@ kbd kbd {
   top: 60px;
   left: 0;
   padding: 10px;
-  background: #444;
+  background: linear-gradient(180deg, #e9f1f3 15.1%, #e9f1f3 23.38%, rgb(189, 223, 227) 100%);
 }
 .webSearch.active label {
   display: none;
@@ -2589,13 +2599,13 @@ kbd kbd {
   left: 0;
   right: 0;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0.5em 0;
+  background: linear-gradient(180deg, #e9f1f3 15%, #e9f1f3 23%, rgb(189, 223, 227) 100%);
 }
 .webSearch.mobile .content {
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  background: #444;
 }
 .webSearch.mobile .formGrp {
   display: flex;
@@ -2605,9 +2615,6 @@ kbd kbd {
   flex-grow: 1;
   margin: 0;
   margin-right: 8px;
-}
-.webSearch.mobile .keywordHot ul a {
-  color: #fff;
 }
 .webSearch .formGrp {
   margin: 0 0 0.5em;
@@ -2660,14 +2667,16 @@ kbd kbd {
 }
 .webSearch .keywordHot .label {
   color: #00597e;
+  word-break: break-word;
+  flex: 1 0 auto;
 }
 .webSearch .keywordHot ul {
   line-height: 1.65em;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: flex-end;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 .webSearch .keywordHot ul li {
   margin: 0;
@@ -4373,7 +4382,7 @@ img.loaded {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, #e9f1f3 15.1%, #e9f1f3 23.38%, rgba(189, 223, 227, 0.66) 100%);
+  background: linear-gradient(180deg, #e9f1f3 15%, #e9f1f3 23%, rgba(189, 223, 227, 0.7) 100%);
   box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.1);
   pointer-events: none;
   z-index: -1;
@@ -7576,15 +7585,12 @@ body.noscroll {
   left: 0;
 }
 .mobileSidebar .mobileArea .sideMainMenu ul li {
-  flex: 1 1 100%;
   flex-direction: row;
   list-style: none;
 }
 .mobileSidebar .mobileArea .sideMainMenu ul li > a {
-  padding: 0.5em 1em;
   min-height: 2em;
   line-height: 2em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .mobileSidebar .mobileArea .sideMainMenu ul li.hasChild > a {
   position: relative;

@@ -72,14 +72,11 @@
         padding: 0;
         left: 0;
         li {
-          flex: 1 1 100%;
           flex-direction: row;
           list-style: none;
           > a {
-            padding: 0.5em 1em;
             min-height: 2em;
             line-height: 2em;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
           }
           &.hasChild {
             > a {
