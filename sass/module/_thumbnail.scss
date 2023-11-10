@@ -6,7 +6,7 @@
     margin: 0 -10px;
   }
   li {
-    margin: 0 10px 40px;
+    margin: 0 10px 20px;
     flex-basis: calc(25% - 20px);
     transition: all 0.3s ease;
     @include screen('tablet') {
