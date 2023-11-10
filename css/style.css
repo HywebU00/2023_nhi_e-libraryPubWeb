@@ -6263,8 +6263,9 @@ table.tableSprite tr:nth-child(even) {
   margin: 0 -10px;
 }
 .thumbnail li {
-  margin: 0 10px 40px;
-  flex-basis: calc(25% - 20px);
+  margin: 0 5px 40px;
+  padding: 0 5px;
+  flex-basis: calc(25% - 10px);
   transition: all 0.3s ease;
 }
 @media screen and (max-width: 991px) {
@@ -6277,15 +6278,19 @@ table.tableSprite tr:nth-child(even) {
     flex-basis: calc(50% - 20px);
   }
 }
-.thumbnail li img {
+.thumbnail li .imgContainer {
   aspect-ratio: 1/1;
-  -o-object-fit: contain;
-     object-fit: contain;
   background: #ccc;
-  object-fit: contain;
   width: 100%;
   border-radius: 10px;
   box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px, 0px 4px 4px 0px rgba(12, 76, 103, 0.25);
+  overflow: hidden;
+}
+.thumbnail li .imgContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .thumbnail li .caption {
   margin: 0.5em auto;
@@ -6309,35 +6314,40 @@ table.tableSprite tr:nth-child(even) {
 .thumbnail li .btnDownload:hover {
   background: linear-gradient(180deg, #004765 36%, #00597e 100%);
 }
+.thumbnail.video .imgContainer {
+  aspect-ratio: 16/9;
+}
+.thumbnail.video .imgContainer::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../images/basic/icon_play.svg) center no-repeat;
+  background-size: 25%;
+  opacity: 0.7;
+}
+.thumbnail.video .imgContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.thumbnail.video li a:hover .imgContainer::after {
+  background: url(../images/basic/icon_play_active.svg) center no-repeat;
+  background-size: 25%;
+  opacity: 1;
+}
 .thumbnail a {
   display: block;
   position: relative;
+  transition: 0.2s;
 }
-.thumbnail a:focus-visible:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  box-shadow: 0px 0px 0px 1px #004765 inset;
+.thumbnail a:hover {
+  transform: translateY(-3px);
 }
-.thumbnail .imgContainer {
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 0.5em;
-}
-.thumbnail .imgContainer img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 50% 50%;
-     object-position: 50% 50%;
+.thumbnail a:hover .imgContainer {
+  box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px, 0px 5px 10px 0px rgba(12, 76, 103, 0.4);
 }
 .thumbnail h2,
 .thumbnail h3,
