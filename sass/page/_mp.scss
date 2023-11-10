@@ -37,7 +37,6 @@
 }
 
 h2 {
-  padding: 0 45px;
   @include screen('tablet') {
     padding: 0;
   }
@@ -71,6 +70,10 @@ h2 {
     @include screen('mobile') {
       padding: 1em 0 2em 0;
     }
+  }
+
+  .mainTitle {
+    padding: 0 45px;
   }
 
   .news {

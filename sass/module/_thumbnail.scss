@@ -6,23 +6,19 @@
     margin: 0 -10px;
   }
   li {
-    margin: 0 5px 40px;
-    padding: 0 5px;
-    flex-basis: calc(25% - 10px);
+    margin: 0 10px 40px;
+    flex-basis: calc(25% - 20px);
     transition: all 0.3s ease;
     @include screen('tablet') {
-      flex-basis: calc(33.33333% - 10px);
+      flex-basis: calc(33.33333% - 20px);
     }
     @include screen('mobile') {
-      flex-basis: calc(50% - 10px);
+      flex-basis: calc(50% - 20px);
     }
     .imgContainer {
-      aspect-ratio: 3/2;
-      background: $colorGray;
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px, 0px 4px 4px 0px rgba(12, 76, 103, 0.25);
-      overflow: hidden;
+      aspect-ratio: 1/1;
+      background: #333;
+      display: flex;
       img {
         width: 100%;
         height: 100%;
@@ -30,6 +26,7 @@
       }
     }
     .caption {
+      width: 90%;
       margin: 0.5em auto;
       font-size: rem(22);
       font-weight: 600;
@@ -43,10 +40,13 @@
     }
     .update,
     .count {
+      margin: 0 auto;
+      width: 90%;
       color: $colorWord2;
     }
     .btnDownload {
-      margin-top: 0.5em;
+      margin: 1em 0;
+      display: block;
       &:hover {
         background: linear-gradient(180deg, #004765 36%, #00597e 100%);
         transform: translate(0);
@@ -66,7 +66,7 @@
         left: 0;
         background: url(../images/basic/icon_play.svg) center no-repeat;
         background-size: 25%;
-        opacity: 0.7;
+        opacity: 0.75;
       }
       img {
         object-fit: cover;
@@ -87,10 +87,21 @@
     }
   }
 
-  a {
+  &.podcast {
+    .imgContainer {
+      aspect-ratio: 16/9;
+    }
+  }
+
+  a:not(.btnDownload) {
     display: block;
     position: relative;
     transition: 0.2s;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px;
+    overflow: hidden;
+    padding: 0 0 1em 0;
     // &:focus-visible {
     //   &:before {
     //     content: '';
@@ -106,9 +117,7 @@
     // }
     &:hover {
       transform: translateY(-3px);
-      .imgContainer {
-        box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px, 0px 5px 10px 0px rgba(12, 76, 103, 0.4);
-      }
+      box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px, 0px 5px 10px 0px rgba(12, 76, 103, 0.4);
     }
   }
 
