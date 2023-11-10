@@ -6320,6 +6320,7 @@ table.tableSprite tr:nth-child(even) {
 }
 .thumbnail li .btnDownload:hover {
   background: linear-gradient(180deg, #004765 36%, #00597e 100%);
+  transform: translate(0);
 }
 .thumbnail.video .imgContainer {
   aspect-ratio: 16/9;
