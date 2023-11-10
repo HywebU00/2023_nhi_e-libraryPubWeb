@@ -287,6 +287,20 @@ h2 {
     background-size: 1920px;
     .mainTitle {
       text-align: center;
+      position: relative;
+      &::before {
+        content: '';
+        width: 240px;
+        height: 430px;
+        position: absolute;
+        top: 10px;
+        left: calc(50% - 380px);
+        background: url(../images/post_img.svg) top left no-repeat;
+        background-size: contain;
+        @include screen('tablet') {
+          content: none;
+        }
+      }
       .en {
         display: block;
       }

@@ -8274,6 +8274,22 @@ h2.mainTitle .en {
 }
 .mp .post .mainTitle {
   text-align: center;
+  position: relative;
+}
+.mp .post .mainTitle::before {
+  content: "";
+  width: 240px;
+  height: 430px;
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 380px);
+  background: url(../images/post_img.svg) top left no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 991px) {
+  .mp .post .mainTitle::before {
+    content: none;
+  }
 }
 .mp .post .mainTitle .en {
   display: block;
