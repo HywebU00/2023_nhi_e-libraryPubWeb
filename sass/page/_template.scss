@@ -25,8 +25,8 @@ body {
 .wrapper {
   width: 100%;
   margin: 0px auto;
+  background: #f8fcfd;
   @include screen('mobile') {
-    background: #fff;
     overflow: hidden;
     overflow-y: auto;
   }
@@ -42,8 +42,10 @@ body {
   }
 }
 .main {
+  overflow: hidden;
   position: relative;
   margin: 0 auto;
+  background: #f7fbfc url(../images/main_bg.jpg) no-repeat top right;
   @include screen('mobile') {
     padding-top: 80px;
   }
@@ -56,44 +58,18 @@ body {
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerPage ClassName
 .innerPage {
+  padding-top: 1em;
   & > .container {
     padding-top: 1em;
-    @include gutter(); //gutter 代表左右要留白
-    display: flex;
+    padding: 0 90px;
+    @include screen('mobile') {
+      padding: 0 15px;
+    }
   }
   .centerBlock {
     flex: none;
     flex-basis: 100%;
     max-width: 100%;
-  }
-  .leftBlock {
-    flex: none;
-    flex-basis: 260px;
-    max-width: 260px;
-    margin-right: 40px;
-    align-self: flex-start;
-    position: sticky;
-    top: 50px;
-    &.hidden {
-      & + .centerBlock {
-        flex: none;
-        flex-basis: 100%;
-        max-width: 100%;
-      }
-    }
-    & + .centerBlock {
-      flex: auto;
-      flex-basis: calc(100% - 300px);
-      max-width: calc(100% - 300px);
-    }
-    @include screen('tablet') {
-      display: none;
-      & + .centerBlock {
-        flex: none;
-        flex-basis: 100%;
-        max-width: 100%;
-      }
-    }
   }
 }
 

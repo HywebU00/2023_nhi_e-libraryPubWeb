@@ -24,10 +24,12 @@
       a {
         min-width: 40px;
         height: 40px;
-        border-radius: 5px;
-        padding: 6px 10px;
+        border-radius: 10px;
+        padding: 6px;
         font-weight: 700;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         white-space: nowrap;
         font-size: 1em;
         color: $colorWord;
@@ -123,6 +125,8 @@
     display: flex;
     align-items: center;
     vertical-align: middle;
+    justify-content: center;
+    color: $colorWord2;
     select {
       margin: 0px 0.5em;
       @include screen('mobile') {
@@ -143,8 +147,14 @@
 
     a {
       padding: 0 5px;
-      color: $colorPrimary;
+      color: $colorWord2;
       text-decoration: none;
+      font-weight: 600;
+      &:hover,
+      &:focus,
+      &.active {
+        color: $colorPrimary;
+      }
     }
   }
 }
