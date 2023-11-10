@@ -1927,6 +1927,7 @@ th {
 .cp h2 {
   font-size: 1.75em;
   margin-bottom: 1.25em;
+  padding: 0;
 }
 .cp h3 {
   font-size: 1.5em;
@@ -6658,9 +6659,13 @@ div.function ul li.icon_forward a:before {
   text-align: left;
   position: relative;
   min-height: 1px;
-  padding-left: 30px;
+  padding: 0.5em 1em 0.5em 2.5em;
   box-sizing: border-box;
-  border-bottom: 1px solid #dadada;
+  border-radius: 30px;
+  background: rgba(233, 241, 243, 0.6);
+  box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.07);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 @media (max-width: 991px) {
   .marquee .swiperBox {
@@ -6674,7 +6679,7 @@ div.function ul li.icon_forward a:before {
   padding: 0;
   position: absolute;
   cursor: pointer;
-  left: 5px;
+  left: 1.2em;
   z-index: 9;
   transform: rotate(90deg);
   padding: 0;
@@ -6686,14 +6691,14 @@ div.function ul li.icon_forward a:before {
   width: 10px;
   height: 20px;
   display: block;
-  background: url("../vendor/swiper/ar.svg") center no-repeat;
+  background: #e9f1f3 url("../vendor/swiper/ar.svg") center no-repeat;
+  background-size: 8px;
 }
 .marquee .swiperBox .marquee-arrow.prevSlider {
-  top: 0;
+  top: 0.5em;
 }
 .marquee .swiperBox .marquee-arrow.nextSlider {
-  bottom: 0;
-  left: 4px;
+  bottom: 0.5em;
 }
 .marquee .swiperBox .marquee-arrow.nextSlider::before {
   transform: rotate(180deg);
@@ -8495,8 +8500,11 @@ h2.title {
   padding: 0;
 }
 
+.cp {
+  color: #333;
+}
 .cp .pic {
-  float: left;
+  float: right;
   margin: 0px 1em 1em 0;
   width: auto;
   width: 45%;
@@ -8626,14 +8634,16 @@ h2.title {
 }
 .fileDownload li:before {
   content: "·";
-  font-size: 2em;
+  font-size: 1.2em;
   font-weight: bold;
   width: 1em;
   height: 1em;
   position: absolute;
-  top: 0.42em;
+  top: 0.8em;
   left: 0.1em;
   color: #666;
+  display: flex;
+  align-items: center;
 }
 .fileDownload li .fileName {
   line-height: 1.8em;
@@ -8912,14 +8922,16 @@ h2.title {
 }
 .webLink li:before {
   content: "·";
-  font-size: 2em;
+  font-size: 1.2em;
   font-weight: bold;
   width: 1em;
   height: 1em;
   position: absolute;
-  top: 0.25em;
+  top: 0.5em;
   left: 0.1em;
   color: #666;
+  display: flex;
+  align-items: center;
 }
 .webLink li a {
   padding: 0.2em 0px;
