@@ -8391,6 +8391,7 @@ h2.mainTitle .en {
 .popular {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 3em 0;
 }
 @media screen and (min-width: 1440px) {
