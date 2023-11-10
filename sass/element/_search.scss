@@ -67,6 +67,9 @@
   display: flex;
   align-items: center;
   padding: 0 45px;
+  @include screen('tablet') {
+    padding: 0 15px;
+  }
   .content {
     display: flex;
     flex: 1 1 auto;

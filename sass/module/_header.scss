@@ -129,6 +129,7 @@
     border-radius: 0 0 60px 60px;
     background: url(../images/header_bg.jpg) no-repeat;
     background-size: cover;
+    padding-bottom: 35px;
     @include screen('mobile') {
       border-radius: 0;
       padding: 0 60px;
@@ -222,7 +223,7 @@
   }
   h1 {
     height: 100px;
-    margin: 35px 45px;
+    margin: 35px 25px 0 45px;
     padding: 0;
     box-sizing: border-box;
     a {

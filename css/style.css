@@ -2531,6 +2531,11 @@ kbd kbd {
   align-items: center;
   padding: 0 45px;
 }
+@media screen and (max-width: 991px) {
+  .webSearch {
+    padding: 0 15px;
+  }
+}
 .webSearch .content {
   display: flex;
   flex: 1 1 auto;
@@ -4273,6 +4278,7 @@ img.loaded {
   border-radius: 0 0 60px 60px;
   background: url(../images/header_bg.jpg) no-repeat;
   background-size: cover;
+  padding-bottom: 35px;
 }
 @media screen and (max-width: 767px) {
   .header .top {
@@ -4360,7 +4366,7 @@ img.loaded {
 }
 .header h1 {
   height: 100px;
-  margin: 35px 45px;
+  margin: 35px 25px 0 45px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -6270,16 +6276,16 @@ table.tableSprite tr:nth-child(even) {
 }
 @media screen and (max-width: 991px) {
   .thumbnail li {
-    flex-basis: calc(33.33333% - 20px);
+    flex-basis: calc(33.33333% - 10px);
   }
 }
 @media screen and (max-width: 767px) {
   .thumbnail li {
-    flex-basis: calc(50% - 20px);
+    flex-basis: calc(50% - 10px);
   }
 }
 .thumbnail li .imgContainer {
-  aspect-ratio: 1/1;
+  aspect-ratio: 3/2;
   background: #ccc;
   width: 100%;
   border-radius: 10px;
@@ -7278,6 +7284,11 @@ body.noscroll {
 .innerPage > .container {
   padding-top: 1em;
   padding: 0 90px;
+}
+@media screen and (max-width: 991px) {
+  .innerPage > .container {
+    padding: 0 45px;
+  }
 }
 @media screen and (max-width: 767px) {
   .innerPage > .container {
