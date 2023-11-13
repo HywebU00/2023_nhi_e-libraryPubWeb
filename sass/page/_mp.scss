@@ -295,8 +295,25 @@ h2 {
         position: absolute;
         top: 10px;
         left: calc(50% - 380px);
-        background: url(../images/post_img.svg) top left no-repeat;
+        background: url(../images/post_img01-1.svg) top left no-repeat;
         background-size: contain;
+        @include screen('tablet') {
+          content: none;
+        }
+      }
+      &::after {
+        content: '';
+        width: 160px;
+        height: 124px;
+        position: absolute;
+        top: 10px;
+        left: calc(50% - 280px);
+        background: url(../images/post_img01-2.svg) top left no-repeat;
+        background-size: contain;
+        animation-name: speaker;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        transform-origin: left bottom;
         @include screen('tablet') {
           content: none;
         }
@@ -482,5 +499,26 @@ h2 {
         }
       }
     }
+  }
+}
+
+@keyframes speaker {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.01);
+  }
+  10% {
+    transform: scale(0.95);
+  }
+  17% {
+    transform: scale(1.03);
+  }
+  22% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.95);
   }
 }
