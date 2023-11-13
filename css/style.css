@@ -8459,6 +8459,7 @@ h2.mainTitle .en {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding: 2px 0;
   flex: 1 1 auto;
   max-width: calc(100% - 440px);
   display: flex;

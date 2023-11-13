@@ -440,6 +440,7 @@ h2 {
   }
   .popularList {
     @include liReset;
+    padding: 2px 0;
     flex: 1 1 auto;
     max-width: calc(100% - 440px);
     display: flex;
