@@ -138,6 +138,9 @@
   &:hover {
     opacity: 0.95;
   }
+  &:focus-visible {
+    outline: 2px dashed $colorImportant;
+  }
   &::before,
   &::after {
     content: '';
@@ -217,6 +220,9 @@
       .caption {
         bottom: 0;
       }
+    }
+    &:focus-visible {
+      box-shadow: 0 0 0 2px $colorImportant inset;
     }
   }
   .swiperArrow {

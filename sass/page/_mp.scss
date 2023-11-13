@@ -25,7 +25,8 @@
       opacity: 0;
       transition: 0.2s;
     }
-    &:hover {
+    &:hover,
+    &:focus-visible {
       padding-right: 2em;
       background: $aHover;
       &::before {

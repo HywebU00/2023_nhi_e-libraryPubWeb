@@ -40,6 +40,9 @@
         background: $colorLight url('../vendor/swiper/ar.svg') center no-repeat;
         background-size: 8px;
       }
+      &:focus-visible {
+        outline: 2px dashed $colorImportant;
+      }
       &.prevSlider {
         top: 0.5em;
       }
@@ -57,7 +60,7 @@
   a {
     display: block;
     line-height: 40px;
-    margin-right: 3em;
+    //margin-right: 3em;
     font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
@@ -65,11 +68,15 @@
     color: #000;
     text-decoration: none;
     span {
-      color: #7cb52f;
+      color: $colorImportant;
       margin-right: 15px;
     }
     &:hover {
-      color: #7cb52f;
+      color: $colorImportant;
+    }
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px $colorImportant inset;
     }
   }
 }

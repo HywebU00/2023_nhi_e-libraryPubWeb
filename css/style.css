@@ -6701,6 +6701,9 @@ div.function ul li.icon_forward a:before {
   background: #e9f1f3 url("../vendor/swiper/ar.svg") center no-repeat;
   background-size: 8px;
 }
+.marquee .swiperBox .marquee-arrow:focus-visible {
+  outline: 2px dashed #ff6c01;
+}
 .marquee .swiperBox .marquee-arrow.prevSlider {
   top: 0.5em;
 }
@@ -6716,7 +6719,6 @@ div.function ul li.icon_forward a:before {
 .marquee a {
   display: block;
   line-height: 40px;
-  margin-right: 3em;
   font-weight: bold;
   overflow: hidden;
   white-space: nowrap;
@@ -6725,11 +6727,15 @@ div.function ul li.icon_forward a:before {
   text-decoration: none;
 }
 .marquee a span {
-  color: #7cb52f;
+  color: #ff6c01;
   margin-right: 15px;
 }
 .marquee a:hover {
-  color: #7cb52f;
+  color: #ff6c01;
+}
+.marquee a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #ff6c01 inset;
 }
 
 .pagination {
@@ -7878,6 +7884,9 @@ br {
 .swiperArrow:hover {
   opacity: 0.95;
 }
+.swiperArrow:focus-visible {
+  outline: 2px dashed #ff6c01;
+}
 .swiperArrow::before, .swiperArrow::after {
   content: "";
   position: absolute;
@@ -7971,6 +7980,9 @@ br {
 .cpSlider .swiper a:hover .caption, .cpSlider .swiper a:focus-visible .caption {
   bottom: 0;
 }
+.cpSlider .swiper a:focus-visible {
+  box-shadow: 0 0 0 2px #ff6c01 inset;
+}
 .cpSlider .swiper .swiperArrow {
   padding: 0;
 }
@@ -8028,11 +8040,11 @@ br {
   opacity: 0;
   transition: 0.2s;
 }
-.more a:hover {
+.more a:hover, .more a:focus-visible {
   padding-right: 2em;
   background: #004765;
 }
-.more a:hover::before {
+.more a:hover::before, .more a:focus-visible::before {
   opacity: 1;
   transform: translateX(8px) rotate(45deg);
 }
