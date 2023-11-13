@@ -6349,6 +6349,10 @@ table.tableSprite tr:nth-child(even) {
 .thumbnail.podcast .imgContainer {
   aspect-ratio: 16/9;
 }
+.thumbnail.podcast .imgContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .thumbnail a:not(.btnDownload) {
   display: block;
   position: relative;

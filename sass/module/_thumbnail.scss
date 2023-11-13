@@ -90,6 +90,9 @@
   &.podcast {
     .imgContainer {
       aspect-ratio: 16/9;
+      img {
+        object-fit: cover;
+      }
     }
   }
 
