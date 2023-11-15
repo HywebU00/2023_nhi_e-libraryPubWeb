@@ -74,6 +74,7 @@
   @include screen('mobile') {
     width: 95%;
     margin: 0px auto;
+    padding: 0;
     li {
       width: 100%;
     }
