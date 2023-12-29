@@ -311,3 +311,23 @@ h2.title {
     }
   }
 }
+
+.videoPlay {
+  h3 {
+    font-size: 1.5em;
+  }
+  .videoTitle {
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 12px 0px 15px 0px;
+    margin: 0.5em 0px 0.2em;
+    border-bottom: 1px solid $colorPrimary;
+  }
+  .video_html5_api-dimensions {
+    aspect-ratio: 16/9;
+    width: 720px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
