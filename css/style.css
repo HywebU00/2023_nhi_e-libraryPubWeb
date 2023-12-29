@@ -9033,10 +9033,10 @@ h2.title {
   margin: 0.5em 0px 0.2em;
   border-bottom: 1px solid #00597e;
 }
-.videoPlay .video_html5_api-dimensions {
+.videoPlay .video-js {
   aspect-ratio: 16/9;
-  width: 720px;
-  height: auto;
+  width: 720px !important;
+  height: auto !important;
   display: block;
   margin: 0 auto;
 }
