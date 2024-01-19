@@ -65,7 +65,7 @@
   margin: 1em 0.5em;
   box-sizing: border-box;
   display: flex;
-  align-items: center;
+  //align-items: center;
   padding: 0 45px;
   @include screen('tablet') {
     padding: 0 15px;
@@ -101,11 +101,23 @@
         flex-basis: 100%;
       }
     }
+    .topic,
+    .type {
+      select {
+        color: $colorOrange;
+      }
+      select:invalid {
+        color: green;
+      }
+    }
     .keyword {
       flex-basis: 100%;
       flex-wrap: wrap;
       .formContent {
         flex-basis: calc(100% - 75px);
+        input {
+          color: $colorOrange;
+        }
       }
     }
   }
@@ -183,16 +195,20 @@
     flex: 0 0 auto;
     padding: 0 0 0 1em;
     margin: 0 0 0.5em;
+    display: flex;
+    flex-direction: column;
     button,
     .btn,
     .btnSearch {
       min-width: auto;
-      margin: 0;
+      margin: 0.3em 0.3em 0.6em;
       border-radius: 65px;
+      padding: 0.5em 2em;
+      transition: 0.2s;
+    }
+    .btnSearch {
       background: linear-gradient(180deg, #3b7f9b 0.01%, #267191 36%, #015a7f 100%);
       color: #fff;
-      padding: 0.65em 2em;
-      transition: 0.2s;
       &:hover {
         background: linear-gradient(180deg, $aHover 36%, $colorPrimary 100%);
         box-shadow: none;

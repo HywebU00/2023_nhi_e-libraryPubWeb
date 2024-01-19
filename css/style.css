@@ -2529,7 +2529,6 @@ kbd kbd {
   margin: 1em 0.5em;
   box-sizing: border-box;
   display: flex;
-  align-items: center;
   padding: 0 45px;
 }
 @media screen and (max-width: 991px) {
@@ -2572,12 +2571,23 @@ kbd kbd {
     flex-basis: 100%;
   }
 }
+.webSearch .content .topic select,
+.webSearch .content .type select {
+  color: #d04500;
+}
+.webSearch .content .topic select:invalid,
+.webSearch .content .type select:invalid {
+  color: green;
+}
 .webSearch .content .keyword {
   flex-basis: 100%;
   flex-wrap: wrap;
 }
 .webSearch .content .keyword .formContent {
   flex-basis: calc(100% - 75px);
+}
+.webSearch .content .keyword .formContent input {
+  color: #d04500;
 }
 .webSearch.active {
   display: flex;
@@ -2650,20 +2660,22 @@ kbd kbd {
   flex: 0 0 auto;
   padding: 0 0 0 1em;
   margin: 0 0 0.5em;
+  display: flex;
+  flex-direction: column;
 }
 .webSearch .btnGrp button,
 .webSearch .btnGrp .btn,
 .webSearch .btnGrp .btnSearch {
   min-width: auto;
-  margin: 0;
+  margin: 0.3em 0.3em 0.6em;
   border-radius: 65px;
-  background: linear-gradient(180deg, #3b7f9b 0.01%, #267191 36%, #015a7f 100%);
-  color: #fff;
-  padding: 0.65em 2em;
+  padding: 0.5em 2em;
   transition: 0.2s;
 }
-.webSearch .btnGrp button:hover,
-.webSearch .btnGrp .btn:hover,
+.webSearch .btnGrp .btnSearch {
+  background: linear-gradient(180deg, #3b7f9b 0.01%, #267191 36%, #015a7f 100%);
+  color: #fff;
+}
 .webSearch .btnGrp .btnSearch:hover {
   background: linear-gradient(180deg, #004765 36%, #00597e 100%);
   box-shadow: none;
