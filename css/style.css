@@ -2593,6 +2593,8 @@ kbd kbd {
 }
 .webSearch .content .keyword .formContent input {
   color: #d04500;
+  margin: 0.3em;
+  width: calc(100% - 0.6em);
 }
 .webSearch.active {
   display: flex;
@@ -2663,7 +2665,7 @@ kbd kbd {
 }
 .webSearch .btnGrp {
   flex: 0 0 auto;
-  padding: 0 0 0 1em;
+  padding: 0 10px;
   margin: 0 0 0.5em;
   display: flex;
   flex-direction: column;
