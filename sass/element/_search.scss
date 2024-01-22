@@ -105,9 +105,12 @@
     .type {
       select {
         color: $colorOrange;
+        option {
+          color: $colorWord;
+        }
       }
       select:invalid {
-        color: green;
+        color: $colorWord;
       }
     }
     .keyword {

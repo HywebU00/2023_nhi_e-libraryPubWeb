@@ -2575,9 +2575,13 @@ kbd kbd {
 .webSearch .content .type select {
   color: #d04500;
 }
+.webSearch .content .topic select option,
+.webSearch .content .type select option {
+  color: #00597e;
+}
 .webSearch .content .topic select:invalid,
 .webSearch .content .type select:invalid {
-  color: green;
+  color: #00597e;
 }
 .webSearch .content .keyword {
   flex-basis: 100%;
