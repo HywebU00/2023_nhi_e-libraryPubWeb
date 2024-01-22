@@ -105,6 +105,7 @@
     .type {
       select {
         color: $colorOrange;
+        width: calc(100% - 0.6em);
         option {
           color: $colorWord;
         }
@@ -209,6 +210,14 @@
       padding: 0.5em 2em;
       transition: 0.2s;
     }
+    .btn {
+      background: linear-gradient(180deg, #e0e0e0 0.01%, #dfdfdf 36%, #d0d0d0 100%);
+      &:hover {
+        background: linear-gradient(180deg, #d0d0d0 36%, #d5d5d5 100%);
+        border-color: #d0d0d0;
+      }
+    }
+
     .btnSearch {
       background: linear-gradient(180deg, #3b7f9b 0.01%, #267191 36%, #015a7f 100%);
       color: #fff;

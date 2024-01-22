@@ -2574,6 +2574,7 @@ kbd kbd {
 .webSearch .content .topic select,
 .webSearch .content .type select {
   color: #d04500;
+  width: calc(100% - 0.6em);
 }
 .webSearch .content .topic select option,
 .webSearch .content .type select option {
@@ -2675,6 +2676,13 @@ kbd kbd {
   border-radius: 65px;
   padding: 0.5em 2em;
   transition: 0.2s;
+}
+.webSearch .btnGrp .btn {
+  background: linear-gradient(180deg, #e0e0e0 0.01%, #dfdfdf 36%, #d0d0d0 100%);
+}
+.webSearch .btnGrp .btn:hover {
+  background: linear-gradient(180deg, #d0d0d0 36%, #d5d5d5 100%);
+  border-color: #d0d0d0;
 }
 .webSearch .btnGrp .btnSearch {
   background: linear-gradient(180deg, #3b7f9b 0.01%, #267191 36%, #015a7f 100%);
@@ -2895,7 +2903,6 @@ kbd kbd {
   background: #c7c7c7;
   border: 1px solid #adadad;
   cursor: pointer;
-  color: #fff;
   outline: none;
 }
 .btn:focus-visible {
@@ -2924,7 +2931,6 @@ kbd kbd {
   background: #004765;
   border: 1px solid #002332;
   cursor: pointer;
-  color: #fff;
   outline: none;
 }
 .btnSubmit:focus-visible {
@@ -2954,7 +2960,6 @@ kbd kbd {
   background: #004765;
   border: 1px solid #002332;
   cursor: pointer;
-  color: #fff;
   outline: none;
 }
 .btnSearch:focus-visible {
@@ -4293,6 +4298,7 @@ img.loaded {
   .header .top {
     border-radius: 0;
     padding: 0 60px;
+    animation: none;
   }
 }
 .header .navigation {
@@ -5715,7 +5721,6 @@ input[type=checkbox]:focus {
   background: #265b72;
   border: 1px solid #193d4c;
   cursor: pointer;
-  color: #fff;
   outline: none;
 }
 .uploadGrp .uploadBtn:focus-visible {
@@ -8133,11 +8138,8 @@ h2.mainTitle .en {
 }
 .mp .news .newsList li a {
   display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding: 1em 1.5em;
-  border-radius: 60px;
+  border-radius: 40px;
   background: rgba(233, 241, 243, 0.6);
   box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.07);
   -webkit-backdrop-filter: blur(5px);
@@ -8146,7 +8148,7 @@ h2.mainTitle .en {
 }
 @media screen and (max-width: 767px) {
   .mp .news .newsList li a {
-    padding: 1em;
+    padding: 1em 1.2em;
   }
 }
 .mp .news .newsList li a:hover {
@@ -8519,7 +8521,7 @@ h2.mainTitle .en {
 }
 @media screen and (max-width: 767px) {
   .popular .popularList li:first-of-type {
-    width: calc(100% - 30px);
+    width: 100%;
   }
 }
 .popular .popularList li:nth-of-type(2) {
@@ -8527,7 +8529,7 @@ h2.mainTitle .en {
 }
 @media screen and (max-width: 767px) {
   .popular .popularList li:nth-of-type(2) {
-    width: calc(100% - 15px);
+    width: 100%;
   }
 }
 .popular .popularList li:last-of-type {
@@ -8538,11 +8540,8 @@ h2.mainTitle .en {
   color: #fff;
   display: block;
   max-width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding: 1em 3em 1em 1.5em;
-  border-radius: 60px 0 0 60px;
+  border-radius: 40px 0 0 40px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 77%, rgba(255, 255, 255, 0.04) 110%);
   box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.15);
   -webkit-backdrop-filter: blur(5px);
@@ -8551,7 +8550,9 @@ h2.mainTitle .en {
 }
 @media screen and (max-width: 767px) {
   .popular .popularList li a {
-    padding: 1em;
+    padding: 1em 1.2em;
+    white-space: normal;
+    text-overflow: initial;
   }
 }
 .popular .popularList li a:hover {

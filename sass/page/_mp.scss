@@ -91,17 +91,17 @@ h2 {
         }
         a {
           display: block;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          // white-space: nowrap;
+          // overflow: hidden;
+          // text-overflow: ellipsis;
           padding: 1em 1.5em;
-          border-radius: 60px;
+          border-radius: 40px;
           background: rgba(233, 241, 243, 0.6);
           box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.07);
           backdrop-filter: blur(5px);
           transition: 0.3s;
           @include screen('mobile') {
-            padding: 1em;
+            padding: 1em 1.2em;
           }
           &:hover {
             box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.15);
@@ -461,13 +461,13 @@ h2 {
       &:first-of-type {
         width: calc(100% - 100px);
         @include screen('mobile') {
-          width: calc(100% - 30px);
+          width: 100%;
         }
       }
       &:nth-of-type(2) {
         width: calc(100% - 50px);
         @include screen('mobile') {
-          width: calc(100% - 15px);
+          width: 100%;
         }
       }
       &:last-of-type {
@@ -478,17 +478,19 @@ h2 {
         color: #fff;
         display: block;
         max-width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
         padding: 1em 3em 1em 1.5em;
-        border-radius: 60px 0 0 60px;
+        border-radius: 40px 0 0 40px;
         background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 77%, rgba(255, 255, 255, 0.04) 110%);
         box-shadow: 0px 4px 4px 0px rgba(12, 76, 103, 0.15);
         backdrop-filter: blur(5px);
         transition: 0.3s;
         @include screen('mobile') {
-          padding: 1em;
+          padding: 1em 1.2em;
+          white-space: normal;
+          text-overflow: initial;
         }
         &:hover {
           background: linear-gradient(90deg, #fff 60%, rgba(255, 255, 255, 0.3) 110%);

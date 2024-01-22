@@ -16,7 +16,7 @@
     background: darken($btnBg, 10); // Old browsers
     border: 1px solid darken($btnBg, 20);
     cursor: pointer;
-    color: #fff;
+    //color: #fff;
     outline: none;
     // @include gradient(lighten($btnBg, 10), darken($btnBg, 18), vertical);
   }
