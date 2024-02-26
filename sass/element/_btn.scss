@@ -115,6 +115,7 @@
   &:focus-visible {
     background: darken($colorPrimary, 10);
     border: solid 1px $colorPrimary;
+    color: #fff;
   }
 }
 // 次要按鈕

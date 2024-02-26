@@ -21,6 +21,12 @@
       margin: 2px;
       list-style: none;
       box-sizing: border-box;
+      @include screen('mobile') {
+        &:not(&.first, &.last, &.prev, &.next, &.active) {
+          display: none;
+        }
+      }
+
       a {
         min-width: 40px;
         height: 40px;
@@ -69,6 +75,7 @@
         a {
           text-indent: -9999px;
           position: relative;
+          font-size: 0;
           &:hover,
           &:focus-visible {
             &:before,
@@ -127,6 +134,7 @@
     vertical-align: middle;
     justify-content: center;
     color: $colorWord2;
+    flex-wrap: wrap;
     select {
       margin: 0px 0.5em;
       @include screen('mobile') {
@@ -144,6 +152,9 @@
   .items {
     display: inline-block;
     vertical-align: middle;
+    @include screen('mobile') {
+      display: none;
+    }
 
     a {
       padding: 0 5px;

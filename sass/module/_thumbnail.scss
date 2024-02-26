@@ -45,8 +45,9 @@
       color: $colorWord2;
     }
     .btnDownload {
-      margin: 1em 0;
+      margin: 1em auto;
       display: block;
+      width: 90%;
       &:hover {
         background: linear-gradient(180deg, #004765 36%, #00597e 100%);
         transform: translate(0);
@@ -96,33 +97,61 @@
     }
   }
 
-  a:not(.btnDownload) {
-    display: block;
-    position: relative;
-    transition: 0.2s;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px;
-    overflow: hidden;
-    padding: 0 0 1em 0;
-    // &:focus-visible {
-    //   &:before {
-    //     content: '';
-    //     position: absolute;
-    //     width: 100%;
-    //     height: 100%;
-    //     left: 0;
-    //     top: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     z-index: 1;
-    //   }
-    // }
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px, 0px 5px 10px 0px rgba(12, 76, 103, 0.4);
+  &.imgDownload {
+    li {
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: rgba(69, 93, 93, 0.45) 0 0 8px;
+      overflow: hidden;
+    }
+    a:not(.btnDownload) {
+      background-color: transparent;
+      display: block;
+      position: relative;
+      transition: 0.2s;
+      border-radius: 10px;
+      overflow: hidden;
+      .imgContainer {
+        overflow: hidden;
+        img {
+          transition: 0.2s;
+        }
+      }
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
     }
   }
+
+  // a:not(.btnDownload) {
+  //   display: block;
+  //   position: relative;
+  //   transition: 0.2s;
+  //   border-radius: 10px;
+  //   background-color: #fff;
+  //   box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px;
+  //   overflow: hidden;
+  //   padding: 0 0 1em 0;
+  //   &:focus-visible {
+  //     &:before {
+  //       content: '';
+  //       position: absolute;
+  //       width: 100%;
+  //       height: 100%;
+  //       left: 0;
+  //       top: 0;
+  //       right: 0;
+  //       bottom: 0;
+  //       z-index: 1;
+  //     }
+  //   }
+  //   &:hover {
+  //     transform: translateY(-3px);
+  //     box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px, 0px 5px 10px 0px rgba(12, 76, 103, 0.4);
+  //   }
+  // }
 
   h2,
   h3,

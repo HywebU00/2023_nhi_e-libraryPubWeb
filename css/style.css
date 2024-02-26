@@ -2536,6 +2536,11 @@ kbd kbd {
     padding: 0 15px;
   }
 }
+@media screen and (max-width: 767px) {
+  .webSearch {
+    display: none;
+  }
+}
 .webSearch .content {
   display: flex;
   flex: 1 1 auto;
@@ -2988,6 +2993,7 @@ kbd kbd {
 .btnDownload:focus-visible {
   background: #00354b;
   border: solid 1px #00597e;
+  color: #fff;
 }
 
 .btnSecondary {
@@ -6338,8 +6344,9 @@ table.tableSprite tr:nth-child(even) {
   color: #333;
 }
 .thumbnail li .btnDownload {
-  margin: 1em 0;
+  margin: 1em auto;
   display: block;
+  width: 90%;
 }
 .thumbnail li .btnDownload:hover {
   background: linear-gradient(180deg, #004765 36%, #00597e 100%);
@@ -6376,19 +6383,28 @@ table.tableSprite tr:nth-child(even) {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.thumbnail a:not(.btnDownload) {
+.thumbnail.imgDownload li {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: rgba(69, 93, 93, 0.45) 0 0 8px;
+  overflow: hidden;
+}
+.thumbnail.imgDownload a:not(.btnDownload) {
+  background-color: transparent;
   display: block;
   position: relative;
   transition: 0.2s;
   border-radius: 10px;
-  background-color: #fff;
-  box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px;
   overflow: hidden;
-  padding: 0 0 1em 0;
 }
-.thumbnail a:not(.btnDownload):hover {
-  transform: translateY(-3px);
-  box-shadow: rgba(233, 241, 243, 0.75) 0 0 0 1px, 0px 5px 10px 0px rgba(12, 76, 103, 0.4);
+.thumbnail.imgDownload a:not(.btnDownload) .imgContainer {
+  overflow: hidden;
+}
+.thumbnail.imgDownload a:not(.btnDownload) .imgContainer img {
+  transition: 0.2s;
+}
+.thumbnail.imgDownload a:not(.btnDownload):hover img {
+  transform: scale(1.05);
 }
 .thumbnail h2,
 .thumbnail h3,
@@ -6791,6 +6807,11 @@ div.function ul li.icon_forward a:before {
   list-style: none;
   box-sizing: border-box;
 }
+@media screen and (max-width: 767px) {
+  .pagination .page li:not(.pagination .page li.first, .pagination .page li.last, .pagination .page li.prev, .pagination .page li.next, .pagination .page li.active) {
+    display: none;
+  }
+}
 .pagination .page li a {
   min-width: 40px;
   height: 40px;
@@ -6832,6 +6853,7 @@ div.function ul li.icon_forward a:before {
 .pagination .page li.first a, .pagination .page li.prev a, .pagination .page li.next a, .pagination .page li.last a {
   text-indent: -9999px;
   position: relative;
+  font-size: 0;
 }
 .pagination .page li.first a:hover:before, .pagination .page li.first a:hover:after, .pagination .page li.first a:focus-visible:before, .pagination .page li.first a:focus-visible:after, .pagination .page li.prev a:hover:before, .pagination .page li.prev a:hover:after, .pagination .page li.prev a:focus-visible:before, .pagination .page li.prev a:focus-visible:after, .pagination .page li.next a:hover:before, .pagination .page li.next a:hover:after, .pagination .page li.next a:focus-visible:before, .pagination .page li.next a:focus-visible:after, .pagination .page li.last a:hover:before, .pagination .page li.last a:hover:after, .pagination .page li.last a:focus-visible:before, .pagination .page li.last a:focus-visible:after {
   border: 2px solid #fff;
@@ -6869,6 +6891,7 @@ div.function ul li.icon_forward a:before {
   vertical-align: middle;
   justify-content: center;
   color: #333;
+  flex-wrap: wrap;
 }
 .pagination .total select {
   margin: 0px 0.5em;
@@ -6888,6 +6911,11 @@ div.function ul li.icon_forward a:before {
 .pagination .items {
   display: inline-block;
   vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+  .pagination .items {
+    display: none;
+  }
 }
 .pagination .items a {
   padding: 0 5px;
@@ -8165,6 +8193,7 @@ h2.mainTitle .en {
 }
 @media screen and (max-width: 767px) {
   .mp .news .newsList li a time {
+    display: block;
     margin-right: 0.5em;
   }
 }
@@ -8396,8 +8425,9 @@ h2.mainTitle .en {
 .mp .post .postSlider a img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #333333;
 }
 @media screen and (max-width: 767px) {
   .mp .post .postSlider a img {
@@ -9058,6 +9088,7 @@ h2.title {
   height: auto !important;
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .keywordBlock {
@@ -9110,9 +9141,6 @@ h2.title {
 }
 .contentBox .thumbnail {
   clear: both;
-}
-.contentBox .thumbnail li {
-  margin-bottom: 0;
 }
 .contentBox .subTitle {
   display: inline-block;

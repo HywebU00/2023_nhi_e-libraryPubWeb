@@ -92,7 +92,7 @@ window.addEventListener('load', () => {
     slidesPerView: 2,
     //centeredSlides: true,
     spaceBetween: 22,
-    loop: false,
+    loop: true,
     // 切換點
     pagination: {
       el: '.postSlider .swiperDots',
