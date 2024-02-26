@@ -15,6 +15,26 @@
     @include screen('mobile') {
       flex-basis: calc(50% - 20px);
     }
+    a:not(.btnDownload) {
+      background-color: #fff;
+      display: block;
+      position: relative;
+      transition: 0.2s;
+      border-radius: 10px;
+      box-shadow: rgba(69, 93, 93, 0.45) 0 0 8px;
+      overflow: hidden;
+      padding-bottom: 0.5em;
+      .imgContainer {
+        overflow: hidden;
+        img {
+          transition: 0.2s;
+        }
+      }
+      &:hover {
+        box-shadow: rgba(69, 93, 93, 0.5) 0 6px 15px;
+      }
+    }
+
     .imgContainer {
       aspect-ratio: 1/1;
       background: #333;
@@ -43,6 +63,7 @@
       margin: 0 auto;
       width: 90%;
       color: $colorWord2;
+      font-size: 1rem;
     }
     .btnDownload {
       margin: 1em auto;
@@ -103,25 +124,6 @@
       background-color: #fff;
       box-shadow: rgba(69, 93, 93, 0.45) 0 0 8px;
       overflow: hidden;
-    }
-    a:not(.btnDownload) {
-      background-color: transparent;
-      display: block;
-      position: relative;
-      transition: 0.2s;
-      border-radius: 10px;
-      overflow: hidden;
-      .imgContainer {
-        overflow: hidden;
-        img {
-          transition: 0.2s;
-        }
-      }
-      &:hover {
-        img {
-          transform: scale(1.05);
-        }
-      }
     }
   }
 

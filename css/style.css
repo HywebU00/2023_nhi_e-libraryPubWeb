@@ -6313,6 +6313,25 @@ table.tableSprite tr:nth-child(even) {
     flex-basis: calc(50% - 20px);
   }
 }
+.thumbnail li a:not(.btnDownload) {
+  background-color: #fff;
+  display: block;
+  position: relative;
+  transition: 0.2s;
+  border-radius: 10px;
+  box-shadow: rgba(69, 93, 93, 0.45) 0 0 8px;
+  overflow: hidden;
+  padding-bottom: 0.5em;
+}
+.thumbnail li a:not(.btnDownload) .imgContainer {
+  overflow: hidden;
+}
+.thumbnail li a:not(.btnDownload) .imgContainer img {
+  transition: 0.2s;
+}
+.thumbnail li a:not(.btnDownload):hover {
+  box-shadow: rgba(69, 93, 93, 0.5) 0 6px 15px;
+}
 .thumbnail li .imgContainer {
   aspect-ratio: 1/1;
   background: #333;
@@ -6342,6 +6361,7 @@ table.tableSprite tr:nth-child(even) {
   margin: 0 auto;
   width: 90%;
   color: #333;
+  font-size: 1rem;
 }
 .thumbnail li .btnDownload {
   margin: 1em auto;
@@ -6388,23 +6408,6 @@ table.tableSprite tr:nth-child(even) {
   background-color: #fff;
   box-shadow: rgba(69, 93, 93, 0.45) 0 0 8px;
   overflow: hidden;
-}
-.thumbnail.imgDownload a:not(.btnDownload) {
-  background-color: transparent;
-  display: block;
-  position: relative;
-  transition: 0.2s;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.thumbnail.imgDownload a:not(.btnDownload) .imgContainer {
-  overflow: hidden;
-}
-.thumbnail.imgDownload a:not(.btnDownload) .imgContainer img {
-  transition: 0.2s;
-}
-.thumbnail.imgDownload a:not(.btnDownload):hover img {
-  transform: scale(1.05);
 }
 .thumbnail h2,
 .thumbnail h3,
