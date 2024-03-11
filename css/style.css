@@ -9142,19 +9142,32 @@ h2.title {
   padding: 2em;
   margin-bottom: 1.5em;
 }
+@media screen and (max-width: 767px) {
+  .contentBox {
+    padding: 1.5em 1em;
+  }
+}
 .contentBox .thumbnail {
   clear: both;
 }
 .contentBox .subTitle {
   display: inline-block;
 }
+@media screen and (max-width: 767px) {
+  .contentBox .subTitle {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+}
 .contentBox .more {
   float: right;
+  margin-bottom: 1em;
 }
 
 .subTitle {
   font-size: 2rem;
   margin: 0 0 1em 0;
+  line-height: 1.5;
 }
 
 .colorA a:hover {
