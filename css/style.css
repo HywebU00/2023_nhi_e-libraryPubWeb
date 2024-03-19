@@ -4508,7 +4508,7 @@ img.loaded {
   width: 100%;
 }
 .socialGrp > ul > li > a.active, .socialGrp > ul > li > a:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
@@ -8596,7 +8596,7 @@ h2.mainTitle .en {
   transform: translateX(-5px);
 }
 .popular .popularList li a time {
-  display: inline-block;
+  display: block;
   margin-right: 1.5em;
 }
 
