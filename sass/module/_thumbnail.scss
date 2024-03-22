@@ -64,6 +64,9 @@
       width: 90%;
       color: $colorWord2;
       font-size: 1rem;
+      @include screen('xsMobile') {
+        font-size: rem(14);
+      }
     }
     .btnDownload {
       margin: 1em auto;

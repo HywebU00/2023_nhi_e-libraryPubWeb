@@ -6363,6 +6363,12 @@ table.tableSprite tr:nth-child(even) {
   color: #333;
   font-size: 1rem;
 }
+@media screen and (max-width: 575px) {
+  .thumbnail li .update,
+  .thumbnail li .count {
+    font-size: 0.875rem;
+  }
+}
 .thumbnail li .btnDownload {
   margin: 1em auto;
   display: block;
